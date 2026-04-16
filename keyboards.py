@@ -14,14 +14,6 @@ def get_keyboard(count: int):
     keyb.adjust(1)
     return keyb.as_markup()
 
-#Это клавиатура в клавиатуре
-# menu = ReplyKeyboardMarkup(
-#     keyboard = [
-#         [KeyboardButton(text='Составить тренировку')]
-#     ],
-#     resize_keyboard = True
-# )
-
 menu = InlineKeyboardMarkup(
     inline_keyboard = [
         [InlineKeyboardButton(text = 'Выбрать тренировку', callback_data="main_menu")
@@ -44,10 +36,3 @@ def get_answer_keyboard(day_name):
 
     answ.adjust(2)
     return answ.as_markup()
-
-#     answ = InlineKeyboardMarkup(
-#     inline_keyboard = [
-#         [InlineKeyboardButton(text = 'Да, погнали тренироваться!', callback_data = 'answ_yes_{day_name}')],
-#         [InlineKeyboardButton(text = 'Нет, сделай ещё раз', callback_data = 'answ_no_{day_name}')]
-#     ]
-# )

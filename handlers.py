@@ -127,7 +127,7 @@ async def decrement_handler(callback: CallbackQuery):
 
     await callback.answer()
 
-# --- сброс ---
+
 @user.callback_query(F.data == "reset")
 async def reset_handler(callback: CallbackQuery):
     start_count = 5
